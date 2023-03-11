@@ -22,7 +22,7 @@ describe("ETHDaddy", () => {
     // Lists Domain
     const transaction = await ethDaddy
       .connect(deployer)
-      .list("jack.eth", tokens(10));
+      .list("shayan.eth", tokens(0.06));
     await transaction.wait();
   });
 
@@ -38,23 +38,23 @@ describe("ETHDaddy", () => {
     });
 
     it("Sets the owner", async () => {
-      const result = await ethDaddy.owner();
+      const result = await ethDaddy.getOwner();
       expect(result).to.equal(deployer.address);
     });
     it("Returns the max supply", async () => {
-      const result = await ethDaddy.maxSupply();
+      const result = await ethDaddy.getMaxSupply();
       expect(result).to.equal(1);
     });
     it("Returns the total supply at deploment", async () => {
-      const result = await ethDaddy.totalSupply();
+      const result = await ethDaddy.getTotalSupply();
       expect(result).to.equal(0);
     });
   });
   describe("Domain", () => {
     it("Returns domain attributes", async () => {
       let domain = await ethDaddy.getDomain(1);
-      expect(domain.name).to.be.equal("jack.eth");
-      expect(domain.cost).to.be.equal(tokens(10));
+      expect(domain.name).to.be.equal("shayan.eth");
+      expect(domain.cost).to.be.equal(tokens(0.06));
       expect(domain.isOwned).to.be.equal(false);
     });
   });
@@ -81,7 +81,7 @@ describe("ETHDaddy", () => {
     });
 
     it("Updates the total supply after minting", async () => {
-      const result = await ethDaddy.totalSupply();
+      const result = await ethDaddy.getTotalSupply();
       expect(result).to.be.equal(1);
     });
 

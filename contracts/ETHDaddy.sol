@@ -5,9 +5,9 @@ pragma solidity ^0.8.9;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
 contract ETHDaddy is ERC721 {
-    uint256 public maxSupply;   // max number of nfts created
-    uint256 public totalSupply;  // total nfts created at particular time
-    address public owner;
+    uint256 private maxSupply;   // max number of nfts created
+    uint256 private totalSupply;  // total nfts created at particular time
+    address private owner;
 
     struct Domain{
         string name;
@@ -61,4 +61,19 @@ contract ETHDaddy is ERC721 {
     }
 
 
+    function getMaxSupply() public view returns(uint256){
+        return maxSupply;
+    }
+
+    function getTotalSupply() public view returns(uint256){
+        return totalSupply;
+    }
+
+    function getOwner() public view returns(address){
+        return owner;
+    }
+
+
 }
+
+
