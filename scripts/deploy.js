@@ -33,12 +33,12 @@ async function main() {
     "murtaza.eth",
   ];
   const costs = [
-    tokens(0.06),
-    tokens(0.05),
-    tokens(0.04),
-    tokens(0.03),
-    tokens(0.02),
-    tokens(0.01),
+    tokens(0.6),
+    tokens(0.5),
+    tokens(0.4),
+    tokens(0.3),
+    tokens(0.2),
+    tokens(0.1),
   ];
 
   for (var i = 0; i < 6; i++) {

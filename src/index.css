@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Signika:wght@300;400;500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@300;400;500;600;700&family=Signika:wght@300;400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@
 }
 
 :root {
-  --clr-white: #FFFFFF;
+  --clr-white: #ffffff;
   --clr-black: #202020;
   --clr-grey: #c4c4c4;
   --clr-grey-2: #8f8f8f;
@@ -21,6 +20,7 @@ body {
 }
 
 /* ------------------------------------------------------ */
+
 /* -- NAVIGATION -- */
 
 nav {
@@ -32,9 +32,7 @@ nav {
 .nav__brand {
   display: flex;
   align-items: center;
-
   padding: 30px 75px;
-
   grid-column: 1 / span 3;
 }
 
@@ -46,9 +44,8 @@ nav {
 
 .nav__brand h1 {
   color: var(--clr-black);
-
   font-family: "Signika";
-  font-size: 1.50em;
+  font-size: 1.5em;
   font-weight: 700;
   letter-spacing: -1px;
 }
@@ -57,7 +54,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-
   list-style: none;
 }
 
@@ -79,16 +75,12 @@ nav {
   width: 175px;
   height: 50px;
   margin: 0 75px 0 auto;
-
   background-color: var(--clr-black);
   color: var(--clr-white);
-
   border: none;
-
   font-family: "Open Sans";
-  font-size: 1.10em;
+  font-size: 1.1em;
   font-weight: 600;
-
   cursor: pointer;
   transition: all 250ms ease;
 }
@@ -98,6 +90,7 @@ nav {
 }
 
 /* ------------------------------------------------------ */
+
 /* -- HEADER -- */
 
 header {
@@ -106,8 +99,7 @@ header {
   background-position: right;
   background-repeat: no-repeat;
   background-color: var(--clr-grey);
-  min-height: 50vh;
-
+  min-height: 65vh;
   position: relative;
 }
 
@@ -120,7 +112,6 @@ header {
 .header__subtitle {
   margin: 0 0 25px 75px;
   padding-top: 100px;
-
   font-family: "Open Sans";
   font-size: 1em;
   font-weight: 600;
@@ -129,7 +120,6 @@ header {
 
 .header__title {
   margin: 0 0 25px 75px;
-
   font-family: "Merriweather";
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
@@ -150,16 +140,12 @@ header {
 .header__button {
   width: 125px;
   height: 60px;
-
   background-color: var(--clr-black);
   color: var(--clr-white);
-
   border: none;
-
   font-family: "Open Sans";
   font-size: 1em;
   font-weight: 600;
-
   cursor: pointer;
   transition: all 250ms ease;
 }
@@ -175,6 +161,7 @@ header {
 }
 
 /* ------------------------------------------------------ */
+
 /* -- CARDS -- */
 
 .cards__section {
@@ -185,11 +172,9 @@ header {
 
 .cards__section h2 {
   margin-top: 50px;
-
   font-family: "Merriweather";
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
-
   text-align: center;
 }
 
@@ -202,17 +187,13 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-
   width: 90%;
   max-width: 800px;
   height: 60px;
-
   border: 1px solid var(--clr-black);
   margin: 25px auto;
   padding-left: 25px;
-
   position: relative;
-
   transition: all 250ms ease;
 }
 
@@ -220,7 +201,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   text-align: left;
 }
 
@@ -238,7 +218,7 @@ header {
 }
 
 .card__info p small {
-  font-size: clamp(0.80rem, 2vw, 0.90rem);
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 .card__info p small span {
@@ -247,7 +227,7 @@ header {
 
 .card__info p strong {
   font-family: "Merriweather";
-  font-size: clamp(1.25rem, 3vw, 1.80rem);
+  font-size: clamp(1.25rem, 3vw, 1.8rem);
   font-weight: 700;
   margin: 0;
 }
@@ -255,17 +235,13 @@ header {
 .card__button {
   width: 125px;
   height: 100%;
-
   background-color: var(--clr-black);
   color: var(--clr-white);
-
   margin-left: auto;
   border: none;
-
   font-family: "Open Sans";
   font-size: 1em;
   font-weight: 600;
-
   cursor: pointer;
   transition: all 250ms ease;
 }
@@ -279,21 +255,19 @@ header {
 }
 
 /* ------------------------------------------------------ */
+
 /* -- MEDIA QUERIES -- */
 
 @media screen and (max-width: 1200px) {
   nav {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .nav__brand {
     grid-column: 1;
   }
-
   .nav__links {
     display: none;
   }
-
   header {
     background-image: none;
   }
@@ -303,7 +277,6 @@ header {
   .nav__brand {
     padding: 30px 50px;
   }
-
   .nav__connect {
     margin: 0 50px 0 auto;
   }

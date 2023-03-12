@@ -1,7 +1,12 @@
 {
-    "31337": {
-        "ETHDaddy": {
-            "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
-        }
+  "5": {
+    "ETHDaddy": {
+      "address": "0xa132e45AF0399443F3C2bc132F47024Fa13E7bCF"
     }
+  },
+  "31337": {
+    "ETHDaddy": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+    }
+  }
 }

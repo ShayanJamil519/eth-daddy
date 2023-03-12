@@ -3,7 +3,8 @@ require("hardhat-gas-reporter");
 require("dotenv").config();
 
 const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL;
-const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const PRIVATE_KEY1 = process.env.PRIVATE_KEY1;
+const PRIVATE_KEY2 = process.env.PRIVATE_KEY2;
 const COINMARKETCAP_API_KEY = process.env.COINMARKETCAP_API_KEY;
 
 /** @type import('hardhat/config').HardhatUserConfig */
@@ -20,7 +21,10 @@ module.exports = {
     goerli: {
       chainId: 5,
       url: GOERLI_RPC_URL,
-      accounts: PRIVATE_KEY !== undefined ? [PRIVATE_KEY] : [],
+      accounts:
+        PRIVATE_KEY1 !== undefined && PRIVATE_KEY2 !== undefined
+          ? [PRIVATE_KEY1, PRIVATE_KEY2]
+          : [],
     },
   },
   gasReporter: {
@@ -29,5 +33,13 @@ module.exports = {
     // outputFile: "gas-report.txt",
     noColors: true,
     coinmarketcap: COINMARKETCAP_API_KEY,
+  },
+  namedAccounts: {
+    deployer: {
+      default: 0,
+    },
+    owner1: {
+      default: 1,
+    },
   },
 };

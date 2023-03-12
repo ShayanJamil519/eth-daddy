@@ -22,7 +22,7 @@ describe("ETHDaddy", () => {
     // Lists Domain
     const transaction = await ethDaddy
       .connect(deployer)
-      .list("shayan.eth", tokens(0.06));
+      .list("shayan.eth", tokens(0.6));
     await transaction.wait();
   });
 
@@ -54,7 +54,7 @@ describe("ETHDaddy", () => {
     it("Returns domain attributes", async () => {
       let domain = await ethDaddy.getDomain(1);
       expect(domain.name).to.be.equal("shayan.eth");
-      expect(domain.cost).to.be.equal(tokens(0.06));
+      expect(domain.cost).to.be.equal(tokens(0.6));
       expect(domain.isOwned).to.be.equal(false);
     });
   });
